@@ -1,0 +1,29 @@
+<%-include('page-head')%>
+    <%-include('header')%>
+
+    <main>
+        <section class="movies-view">
+            <%
+            let movieView = ""; 
+            for (let i = 0; i < movies.length || i < 8; i++){
+                movieView += `<a href="./movie/${i}"><article class="movie-summary">
+                <h3>${movies[i].name}</h3>
+                <section class="img-container">
+                    <img src="${movies[i].image}" alt="Poster">
+                </section>
+
+                <p class="rating">Score: ${movies[i].myScore}/100</p>
+            </article></a>`
+            }
+            %>
+            <%-movieView%>
+        </section>
+    </main>
+
+<a href="./"></a>
+
+
+
+
+    <%-include('footer')%>
+<%-include('page-tail')%>
